@@ -1,0 +1,19 @@
+# tmlanguage test script
+[#test]
+[`test]`
+[`te`st]
+[test 123]
+[test 가나다 123ㄱ]
+[test:]
+
+[test]
+  ty#pe: 123;
+  #type: 123;
+  type: 123;
+  type: 123;
+  type: 1#23;
+  type: `abc`;
+  type: `ab#c`, `abc`;#, `abc`
+  type: true;false;
+  abc
+    : 123;

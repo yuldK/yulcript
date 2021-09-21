@@ -1,0 +1,26 @@
+{
+	"status":
+	[
+		{ 
+			"key": "name",
+			"value": "string",
+			"desc": "이름입니다."
+		},
+		{ 
+			"key": "hp",
+			"value": "int",
+			"desc": "체력"
+		},
+		{ 
+			"key": "mp",
+			"value": "int",
+			"desc": "마력"
+		},
+		{ 
+			"key": "skill",
+			"value": "string",
+			"array": 0,
+			"desc": "보유한 스킬 목록입니다."
+		}
+	]
+}

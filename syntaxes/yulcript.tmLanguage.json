@@ -1,0 +1,80 @@
+{
+	"name": "yulcript",
+	"patterns":
+	[
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#string"
+		}
+	],
+	"repository":
+	{
+		"comment":
+		{
+			"patterns":
+			[
+				{
+					"name": "comment.line",
+					"begin": "#",
+					"end": "$"
+				}
+			]
+		},
+		"keywords":
+		{
+			"patterns":
+			[
+				{
+					"name": "storage.type.class.yulcript",
+					"match": "(?<=\\[)([\\w -]+)(?=\\])"
+				},
+				{
+					"name": "entity.name.type.yulcript",
+					"match": "(?<=(;|\\]|^)\\s*)\\b([\\w -]*)(?=\\s*:)"
+				},
+				{
+					"name": "constant.language.yulcript",
+					"match": "(true|false)"
+				}
+			]
+		},
+		"number":
+		{
+			"patterns":
+			[
+				{
+					"name":"constant.numeric.yulcript",
+					"match":"(?<=^|\\s|\\]|`|,|:|;)([+-]?\\d+(\\.\\d+)?)(?=$|\\s|\\[|`|,|:|;|#)"
+				}
+			]
+		},
+		"string":
+		{
+			"patterns":
+			[
+				{
+					"name": "string.quoted.single.yulcript",
+					"begin": "`",
+					"beginCaptures":
+					{
+						"name": "punctuation.definition.string.begin.yulcript"
+					},
+					"end": "`",
+					"endCaptures":
+					{
+						"name": "punctuation.definition.string.end.yulcript"
+					}
+				}
+			]
+		}
+	},
+	"scopeName": "source.yulcript"
+}

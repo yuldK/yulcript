@@ -1,0 +1,57 @@
+{
+	"name": "yulcript",
+	"displayName": "yulcript",
+	"description": "vscode의 언어 지원 확장 제작 방법의 설명을 위한 교육용 확장입니다.",
+	"version": "0.0.1",
+	"publisher": "yuldk",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "yulcript",
+				"aliases": [
+					"yulcript",
+					"yc"
+				],
+				"extensions": [
+					".yc"
+				],
+				"configuration": "./syntaxes/language-configuration.json"
+			},
+			{
+				"id": "jsonc",
+				"extensions": [
+					".ycg"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "yulcript",
+				"scopeName": "source.yulcript",
+				"path": "./syntaxes/yulcript.tmLanguage.json"
+			}
+		]
+	},
+	"main": "./out/extension.js",
+	"activationEvents": [
+		"onLanguage:yulcript"
+	],
+	"scripts": {
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^16.9.4",
+		"@types/vscode": "^1.60.0",
+		"@typescript-eslint/eslint-plugin": "^4.31.2",
+		"@typescript-eslint/parser": "^4.31.2",
+		"eslint": "^7.32.0",
+		"typescript": "^4.4.3"
+	},
+	"dependencies": {}
+}
