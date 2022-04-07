@@ -1,0 +1,13 @@
+{
+	"name": "yulcript-server",
+	"description": "vscode의 언어 지원 확장 제작 방법의 설명을 위한 교육용 확장(서버)입니다.",
+	"version": "0.0.1",
+	"publisher": "yuldk",
+	"engines": {
+		"node": "*"
+	},
+	"dependencies": {
+		"vscode-languageserver": "^7.0.0",
+		"vscode-languageserver-textdocument": "1.0.1"
+	}
+}

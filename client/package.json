@@ -1,0 +1,16 @@
+{
+	"name": "yulcript-client",
+	"description": "vscode의 언어 지원 확장 제작 방법의 설명을 위한 교육용 확장(클라이언트)입니다.",
+	"version": "0.0.1",
+	"publisher": "yuldk",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^7.0.0"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.60.0",
+		"@vscode/test-electron": "^1.6.2"
+	}
+}

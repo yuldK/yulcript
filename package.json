@@ -2,7 +2,7 @@
 	"name": "yulcript",
 	"displayName": "yulcript",
 	"description": "vscode의 언어 지원 확장 제작 방법의 설명을 위한 교육용 확장입니다.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "yuldk",
 	"engines": {
 		"vscode": "^1.60.0"
@@ -38,12 +38,14 @@
 			}
 		]
 	},
-	"main": "./out/extension.js",
+	"main": "./client/out/extension",
 	"activationEvents": [
 		"onLanguage:yulcript"
 	],
 	"scripts": {
-		"watch": "tsc -watch -p ./"
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd .."
 	},
 	"devDependencies": {
 		"@types/node": "^16.9.4",

@@ -8,14 +8,33 @@
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			],
-			"name": "Launch Extension",
+			"name": "Launch Client",
 			"outFiles": [
-				"${workspaceFolder}/out/**/*.js"
+				"${workspaceFolder}/client/out/**/*.js"
 			],
 			"preLaunchTask": "npm: watch",
 			"request": "launch",
 			"type": "extensionHost"
-		}
+		},
+		{
+			"type": "node",
+			"request": "attach",
+			"name": "Attach to Server",
+			"port": 6009,
+			"restart": true,
+			"outFiles": [
+				"${workspaceRoot}/server/out/**/*.js"
+			]
+		},
 
+	],
+	"compounds": [
+		{
+			"name": "Client + Server",
+			"configurations": [
+				"Launch Client",
+				"Attach to Server"
+			]
+		}
 	]
 }
